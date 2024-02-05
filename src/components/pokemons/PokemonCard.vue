@@ -11,7 +11,7 @@ export default {
 </script>
 
 <template>
-    <div class="pokemon-card text-center p-2 text-white">
+    <div class="pokemon-card text-center p-2">
         <img :src="image" :alt="name" class="img-fluid mb-3">
         <div>{{ number }}</div>
         <h3 class="fs-5">{{ name }}</h3>
