@@ -25,7 +25,7 @@ export default {
 
 <style lang="scss" scoped>
 .pokedex {
-    height: 600px;
+    height: 700px;
     background-color: lightgray;
     border-radius: 40px;
 }
