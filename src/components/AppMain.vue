@@ -13,6 +13,10 @@ export default {
                 <button type="button" class="btn btn-warning"></button>
                 <button type="button" class="btn btn-success"></button>
             </div>
+
+            <div class="pokemon-container">
+
+            </div>
         </section>
     </main>
 </template>
@@ -29,5 +33,12 @@ export default {
     width: 18%;
     border-radius: 40px 0 40px 0;
     margin-bottom: 20px;
+}
+
+.pokemon-container {
+    margin: 30px;
+    background-color: rgb(29, 29, 29);
+    height: 80%;
+    border-radius: 40px;
 }
 </style>
