@@ -1,20 +1,17 @@
 <script>
 import PokemonsList from './pokemons/PokemonsList.vue';
+import AppHeader from './AppHeader.vue';
 export default {
     name: 'AppMain',
-    components: { PokemonsList }
+    components: { PokemonsList, AppHeader }
 };
 </script>
 
 <template>
     <main class="container">
         <section class="pokedex">
-            <div class="pokedex-buttons d-flex gap-4 p-4">
-                <button type="button" class="btn btn-primary btn-lg"> </button>
-                <button type="button" class="btn btn-danger"></button>
-                <button type="button" class="btn btn-warning"></button>
-                <button type="button" class="btn btn-success"></button>
-            </div>
+
+            <AppHeader />
 
             <div class="pokemon-container">
                 <PokemonsList />
@@ -30,12 +27,7 @@ export default {
     border-radius: 40px;
 }
 
-.pokedex-buttons {
-    background-color: grey;
-    width: 18%;
-    border-radius: 40px 0 40px 0;
-    margin-bottom: 20px;
-}
+
 
 .pokemon-container {
     margin: 30px;
