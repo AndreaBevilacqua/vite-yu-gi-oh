@@ -29,7 +29,7 @@ export default {
 <template>
     <select class="form-select">
         <option selected>All</option>
-        <option value="1"></option>
+        <option v-for="type in types">{{ type }}</option>
     </select>
 </template>
 
