@@ -1,6 +1,8 @@
 <script>
+import SelectForm from './SelectForm.vue';
 export default {
-    name: 'AppHeader'
+    name: 'AppHeader',
+    components: { SelectForm }
 }
 </script>
 
@@ -16,7 +18,7 @@ export default {
 
         </div>
         <div class="pokedex-select">
-
+            <SelectForm />
         </div>
     </div>
 </template>
@@ -35,6 +37,7 @@ export default {
     border-radius: 0px 0px 40px 40px;
     margin-bottom: 20px;
 
+
 }
 
 .pokedex-select {
@@ -42,6 +45,8 @@ export default {
     width: 18%;
     border-radius: 0px 40px 0px 40px;
     margin-bottom: 20px;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 </style>

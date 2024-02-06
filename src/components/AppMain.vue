@@ -9,7 +9,7 @@ export default {
 
 <template>
     <main class="container">
-        <section class="pokedex">
+        <section class="pokedex shadow">
 
             <AppHeader />
 
@@ -25,9 +25,8 @@ export default {
     height: 700px;
     background-color: lightgray;
     border-radius: 40px;
+    border: 2px solid black;
 }
-
-
 
 .pokemon-container {
     margin: 30px;
