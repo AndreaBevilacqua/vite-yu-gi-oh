@@ -11,7 +11,7 @@ export default {
     <main class="container">
         <section class="pokedex shadow">
 
-            <AppHeader />
+            <AppHeader @type-change="filterPokemon" />
 
             <div class="pokemon-container">
                 <PokemonsList />

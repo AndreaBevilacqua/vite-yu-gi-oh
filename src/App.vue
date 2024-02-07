@@ -11,10 +11,31 @@ export default {
   data: () => ({
     pokemons: []
   }),
+  methods: {
+    fetchPokemon() {
+      axios.get(endpoint).then(res => {
+        store.pokemons = res.data.docs;
+      })
+    },
+    fetchTypes() {
+      axios.get(endpoint + '/types1').then(res => {
+        store.types = res.data.map((type, i) => {
+          return {
+            id: i + 1,
+            label: type,
+            value: type,
+          }
+        })
+      })
+    },
+    filterPokemon(type) {
+      const url = `${endpoint}?eq[type1]=${type}`;
+      this.fetchPokemon(url);
+    }
+  },
   created() {
-    axios.get(endpoint).then(res => {
-      store.pokemons = res.data.docs;
-    })
+    this.fetchPokemon();
+    this.fetchTypes();
   }
 };
 </script>

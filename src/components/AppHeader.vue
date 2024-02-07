@@ -1,30 +1,11 @@
 <script>
 import SelectForm from './SelectForm.vue';
+import { store } from '../data/store'
 export default {
     name: 'AppHeader',
     components: { SelectForm },
-    data: () => ({
-        types: [
-            "Bug",
-            "Dark",
-            "Dragon",
-            "Electric",
-            "Fairy",
-            "Fighting",
-            "Fire",
-            "Flying",
-            "Ghost",
-            "Grass",
-            "Ground",
-            "Ice",
-            "Normal",
-            "Poison",
-            "Psychic",
-            "Rock",
-            "Steel",
-            "Water"
-        ]
-    })
+    data: () => ({ store }),
+    emit: ['type-change']
 }
 </script>
 
@@ -40,7 +21,7 @@ export default {
 
         </div>
         <div class="pokedex-select">
-            <SelectForm default="All" :options="types" />
+            <SelectForm default="All" :options="types" @option-change="$emit('type-change', $event)" />
         </div>
     </div>
 </template>
