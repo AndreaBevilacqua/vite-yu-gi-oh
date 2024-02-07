@@ -2,7 +2,29 @@
 import SelectForm from './SelectForm.vue';
 export default {
     name: 'AppHeader',
-    components: { SelectForm }
+    components: { SelectForm },
+    data: () => ({
+        types: [
+            "Bug",
+            "Dark",
+            "Dragon",
+            "Electric",
+            "Fairy",
+            "Fighting",
+            "Fire",
+            "Flying",
+            "Ghost",
+            "Grass",
+            "Ground",
+            "Ice",
+            "Normal",
+            "Poison",
+            "Psychic",
+            "Rock",
+            "Steel",
+            "Water"
+        ]
+    })
 }
 </script>
 
@@ -18,7 +40,7 @@ export default {
 
         </div>
         <div class="pokedex-select">
-            <SelectForm />
+            <SelectForm default="All" :options="types" />
         </div>
     </div>
 </template>
